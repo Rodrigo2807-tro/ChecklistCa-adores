@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Great+Vibes&family=Inter:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-cursive: "Great Vibes", cursive;
+}
+
+@layer utilities {
+  .logo-text {
+    font-family: var(--font-cursive);
+    background: linear-gradient(135deg, #78350f 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .header-bar {
+    position: relative;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+    background-color: transparent;
+  }
+  
+  @media (min-width: 768px) {
+    .header-bar {
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .theme-section {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, var(--theme-bg-light), transparent);
+    border-left: 4px solid var(--theme-border);
+    box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+  }
+
+  @media (min-width: 768px) {
+    .theme-section {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  .theme-card {
+    background: linear-gradient(to bottom right, var(--theme-bg-light), #ffffff);
+    border-left: 3px solid var(--theme-border);
+  }
+  
+  .custom-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2378716c' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.25em 1.25em;
+    padding-right: 2.5rem;
+  }
+}
